@@ -8,7 +8,8 @@ WITH cte_transactions AS
 			, transactions
 		FROm all_sessions
 		WHERE timeonsite>0 )
-SELECT SUM(transactions)/(Count(*))*100 AS PCT_purchase
+SELECT 
+		SUM(transactions)/(Count(*))*100 AS PCT_purchase
 FROm cte_transactions
 ;
 ```
@@ -21,7 +22,8 @@ Question 2: Total revenue from each refering sites
 SQL Queries:
 
 ```SQL
-SELECT DISTINCT(al.channelgrouping) AS refering_site
+SELECT 
+		DISTINCT(al.channelgrouping) AS refering_site
 		, COUNT(DISTINCT al.fullvisitorID) AS unique_visitor_count
 		, SUM(an.revenue) AS Total_revenue
 FROM all_sessions AS al
@@ -31,7 +33,7 @@ GROUP BY al.channelgrouping
 ORDER BY unique_visitor_count DESC
 ``` 
 Answer:
-<src img= ![Alt text](Sd2.png)>
+<src img= Imagedirectory/Sd2.png>
 
 
 
@@ -39,7 +41,8 @@ Question 3: Brand with total unit sold and channelgrouping
 
 SQL Queries:
 ```SQL
-SELECT al.brand AS brand
+SELECT 
+		al.brand AS brand
 		, al.channelgrouping AS sales_channel
 		, COUNT(DISTINCT al.fullvisitorID) AS unique_visitor_count
 		, SUM(an.revenue) AS Total_revenue
@@ -61,7 +64,8 @@ Question 4: City and Country with the most revenue
 SQL Queries:
 
 ```SQL
-SELECT  city
+SELECT  
+		city
 		, country
 		, SUM(total_revenue) AS totalRevenue
 FROM sale_analytics

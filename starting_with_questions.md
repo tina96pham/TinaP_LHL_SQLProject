@@ -6,7 +6,8 @@ Answer the following questions and provide the SQL queries used to find the answ
 
 SQL Queries:
 ```SQL
-SELECT  city
+SELECT  
+		city
 		, country
 		, SUM(totalTransactionRevenue) AS totaltransactionrevenue
 FROM allsession_clean
@@ -27,9 +28,10 @@ Answer:
 
 SQL Queries:
 ```SQL
-SELECT city
-		, country
-		, AVG(productquantity) AS Averageorderedquantity
+SELECT 
+	city
+	, country
+	, AVG(productquantity) AS Averageorderedquantity
 FROM (SELECT *
 	 	FROM all_sessions
 	 WHERE productquantity IS NOT NULL) AS Valid_Data
@@ -50,8 +52,8 @@ Answer:
 
 SQL Queries:
 ```SQL
-SELECT
-    al.country as country
+SELECT 
+	al.country as country
     , al.city as city
     , p.category as productcategory,
     , SUM(an.units_sold) as totalUnitsSold
@@ -80,7 +82,8 @@ Answer:
 SQL Queries:
 
 ```SQL
-SELECT DISTINCT(p.brand)
+SELECT 
+		DISTINCT(p.brand) AS Brand
 		, al.city
 		, al.country
 		, SUM(an.units_sold) as totalUnitsSold
