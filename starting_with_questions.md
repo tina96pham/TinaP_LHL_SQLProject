@@ -17,7 +17,7 @@ LIMIT 10
 ```
 
 Answer:
-<img src= ![Alt text](sq1-1.png)>
+<img src= Imagedirectory/sq1.png>
 
 
 
@@ -40,7 +40,7 @@ ORDER BY Averageorderedquantity DESC
 
 
 Answer:
-<img src= ![Alt text](sq2-2.png)>
+<img src= Imagedirectory/sq2.png>
 
 
 
@@ -69,7 +69,7 @@ LIMIT 10
 
 
 Answer:
-<img src= ![Alt text](sq3-1.png)>
+<img src= Imagedirectory/sq3.png>
 
 
 
@@ -98,7 +98,7 @@ LIMIT 10
 ```
 
 Answer:
-<img src= ![Alt text](sq4-1.png)>
+<img src= Imagedirectory/sq4.png>
 
 
 
@@ -123,7 +123,7 @@ LIMIT 10
 
 
 Answer:
-<img src= ![Alt text](sq5.png)>
+<img src= Imagedirectory/sq5.png>
 
 
 
